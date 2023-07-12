@@ -1,0 +1,23 @@
+<h2>Department list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+<th>DepartmentId:</th>
+<th>DepartmentName:</th>
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let departments of  department">
+<td>{{departments.did}}</td>
+<td>{{departments.dname}}</td>
+<td><button (click)="updateDepatment(departments.did)" class="btn btn-info">
+    Update</button></td>
+ <td><button (click)="deleteDepartment(departments.did)" class="btn btn-danger">
+    Delete</button></td>
+   {{message}}
+</tr>
+</tbody>
+</table>
+
